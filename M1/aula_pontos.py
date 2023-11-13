@@ -19,7 +19,7 @@ print(type(p3))
 print('--------------------------------------------')
 
 # Estrair a sequência de coordenadas do ponto # 
-# coords
+# coords - coordenadas
 
 p_coords = p1.coords
 print(p_coords)
