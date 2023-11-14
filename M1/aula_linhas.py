@@ -38,7 +38,7 @@ print(ly)
 
 print('--------------------------------------------')
 
-# Comprimento de linha #
+# Comprimento de linha # -> km
 # comp 
 
 l_comp = linha.length # length - comprimento

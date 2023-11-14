@@ -1,5 +1,6 @@
 from geopy.distance import geodesic
-from shapely.geometry import Point
+from shapely.geometry import Point, LineString, Polygon
+from shapely.geometry import MultiPoint
 # EXERCÍCIOS M1 - TRABAÇLHANDO COM GEOMETRIAS #
 # E1 - Criando geometrias básicas e obtendo seus atributos
 
@@ -32,3 +33,36 @@ for i in range(len(pontos)):
 
 print('A maior distância é %s km.' %round(maior_distancia, 2))
 print(f'Os pontos correspondentes são {ponto1} e {ponto2}.')
+
+print('--------------------------------------------')
+
+# b) Crie um objeto do tipo linha (LineString) que conecta esses cinco locais. Mostre na tela o tipo de objeto dessa linha e obtenha seu comprimento total.
+
+linha_ref = LineString([ped, inov, cens, cine, parque])
+
+l_comp = linha_ref.length
+
+print(linha_ref)
+print(type(linha_ref))
+print('O comprimento total da linha é: %s' %round(l_comp, 2))
+
+print('--------------------------------------------')
+
+# c) Descubra a área e o centróide do polígono que tem esses cinco locais como vértices.
+plg = Polygon([[p.x, p.y] for p in [ped, inov, cens, cine, parque]])
+
+cent_plg = plg.centroid
+area_plg = plg.area
+
+print(f'A área do polígono formado pelos 5 pontos é equivalente a {round(area_plg, 2)} e seu centróide é ({round(cent_plg.x, 2)}, {round(cent_plg.y, 2)})')
+
+print('--------------------------------------------')
+
+# d) Gere o retângulo envolvente do polígono gerado em c.
+retang_plg = plg.envelope
+
+print(f'O retângulo envolve do polígono é: {retang_plg}.')
+
+# e) Crie uma coleção de geometrias do tipo Multiponto (MultiPoint) para armazenar a localização desses cinco lugares
+multi_pts = MultiPoint([ped, inov, cens, cine, parque])
+print(f'Multiponto: {multi_pts}')
