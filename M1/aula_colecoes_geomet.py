@@ -1,5 +1,5 @@
-from shapely.geometry import Point, LineString, Polygon
-from shapely.geometry import MultiPoint, MultiLineString, MultiPolygon, box
+from shapely import geometry
+from shapely.geometry import Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon, box
 
 # -------- PONTOS -------- #
 
