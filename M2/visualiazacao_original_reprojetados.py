@@ -2,6 +2,7 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 from pyproj import CRS
 
+# Caminho do shapefile
 shapefile_path = "M2/arquivos_aulas/a__031_001_americaDoSul.shp"
 bra = gpd.read_file(shapefile_path)
 
@@ -21,7 +22,8 @@ bra_br_albers = bra.to_crs(crs=sc_br_albers)
 bra_gall_peters = bra.to_crs(crs=sc_gall_peters)
 bra_stereographic = bra.to_crs(crs=sc_stereographic)
 
-fig, ax = plt.subplots(2, 3, figsize=(15, 10)) # Configura a figura e os subplots
+# Configura a figura e os subplots
+fig, ax = plt.subplots(2, 3, figsize=(15, 10))
 
 # Plotagem dos mapas
 bra_geo.plot(facecolor="gray", ax=ax[0, 0])
@@ -42,6 +44,16 @@ ax[0, 2].set_title("Gall-Peters - Projetada")
 bra_stereographic.plot(facecolor="gray", ax=ax[1, 2])
 ax[1, 2].set_title("Estereográfica polar - Projetada")
 
-plt.tight_layout() # Remove espaços ou sobreposições entre plots
+plt.tight_layout()  # Remove espaços ou sobreposições entre plots
 
 plt.show()
+
+print("--------------------------------------------------------------")
+
+# Calculando a área do Brasil para cada um dos CRS
+print("Estereografica conforme:", bra_stereographic[bra_stereographic.NAME_SORT=="Brazil"].to_crs(crs=sc_geo).area/1000000)
+print("Gall-Peters equivalente:", bra_gall_peters[bra_gall_peters.NAME_SORT=="Brazil"].to_crs(crs=sc_geo).area/1000000)
+print("Albers equivalente:", bra_albers[bra_albers.NAME_SORT=="Brazil"].to_crs(crs=sc_geo).area/1000000)
+print("Brasil Albers equivalente:", bra_br_albers[bra_br_albers.NAME_SORT=="Brazil"].to_crs(crs=sc_geo).area/1000000)
+print("SIRGAS 2000:", bra_geo[bra_geo.NAME_SORT=="Brazil"].area/1000000)
+print("WGS84:", bra.to_crs(crs=sc_geo).area/1000000)
