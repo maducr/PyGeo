@@ -1,0 +1,3 @@
+pip install geopandas matplotlib pyproj
+
+pip install tqdm 
