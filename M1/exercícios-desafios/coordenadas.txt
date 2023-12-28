@@ -1,0 +1,7 @@
+Latitude,Longitude,Parada,Linha
+-8.88,-63.83,Parada1,177
+-8.87,-63.82,Parada2,177
+-8.86,-63.81,Parada3,178
+-8.85,-63.80,Parada4,178
+-8.84,-63.79,Parada5,179
+-8.83,-63.78,Parada6,179
