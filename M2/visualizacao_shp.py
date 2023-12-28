@@ -1,5 +1,5 @@
 # VISUALIZAÇÃO DE ARQUIVOS SHAPEFILE #
-import geopandas as gpd
+import geopandas as gpd  # 'gpd' é o "apelido" pelo qual a biblioteca será chamada do script
 import matplotlib.pyplot as plt # 'plt' é o "apelido" pelo qual a biblioteca será chamada do script
 
 # Caminho do shapefile

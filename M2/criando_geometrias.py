@@ -53,7 +53,7 @@ ax.xaxis.set_major_formatter(FuncFormatter(lambda x, _: '{:.2f}'.format(x)))
 ax.yaxis.set_major_formatter(FuncFormatter(lambda y, _: '{:.2f}'.format(y)))
 
 # Exibindo o gráfico
-#plt.show()
+plt.show()
 
 print("------------------------------------------------------------------------------------------------------------------------")
 
