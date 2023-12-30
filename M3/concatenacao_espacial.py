@@ -98,4 +98,4 @@ bares = bares.to_crs(crs = "epsg:4674") # Reprojetando o geodataframe bares para
 print(bares.crs == set_pop.crs) # Verificando se os sistemas de coordenadas dos geodataframes bares e set_pop são iguais agora
 print("--------------------------------------------------------------")
 
-sjc_join=gpd.sjoin(bares,set_pop,how="inner",predicate="within")
+sjc_join = gpd.sjoin(bares, set_pop,nhow = "inner", predicate = "within")
