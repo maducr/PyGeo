@@ -1,0 +1,9 @@
+Local;Endereço
+Afonso Pena;Praça Afonso Pena, São José dos Campos 
+Ouro Pretp;Praça Ouro Preto, São José dos Campos 
+Caratinga;Praça Caratinga, São José dos Campos 
+Poli;Centro Poliesportivo Vila Tesouro, São José dos Campos 
+Matio Porto;Praça Mario Porto, São José dos Campos 
+CJ;Centro da Juventude, São José dos Campos 
+Vicentina;Parque Vicentina Aranha, São José dos Campos 
+

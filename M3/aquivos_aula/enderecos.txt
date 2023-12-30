@@ -1,0 +1,5 @@
+Bar;Endereço
+Bar do Coronel;R. Francisco Rafael, 298, São José Dos Campos
+Snooker Music Bar;Av Andrômeda 3330, São José Dos Campos
+Kadu bar e creperia;R. Inconfidencia, 298, São José Dos Campos
+Boemia e Rapsodias;Av. Rui Barbosa, 1985, São José Dos Campos
