@@ -1,4 +1,0 @@
-pip install geopandas matplotlib pyproj
-pip install geopy
-pip install shapely
-pip install tqdm 
